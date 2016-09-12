@@ -4,7 +4,7 @@ var c = color(255, 204, 0);
 
 
 function setup() {
-  createCanvas(800, 500)
+  createCanvas(windowWidth, windowHeight);
   rectMode (CENTER);
   ellipseMode (CENTER);
   background (102, 204, 255, 100);
