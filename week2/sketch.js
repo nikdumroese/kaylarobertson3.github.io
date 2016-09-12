@@ -17,26 +17,38 @@ function draw() {
   strokeWeight(0);
   line(0, 500, 800, 500);
 
-  //circles
+  //circles//
   strokeWeight(1);
-  fill(100);
-  ellipse(500, 200, 100, 100);
+  fill(255, 153, 51);
+  ellipse(500, 200, 600, 600);
 
   noStroke();
-  fill(255);
-  ellipse(500, 200, 10, 10);
+  fill(255, 204, 0);
+  ellipse(500, 200, 500, 500);
+
+  strokeWeight(0);
+  fill(255, 204, 153);
+  ellipse(500, 200, 400, 400);
+
+  strokeWeight(0);
+  fill(255, 102, 0);
+  ellipse(500, 200, 300, 300);
 
   strokeWeight(1);
-  fill(0, 126, 255, 102);
+  fill(255, 133, 51);
   ellipse(500, 200, 200, 200);
 
   strokeWeight(1);
-  fill(0, 300, 255, 102)
-  ellipse(500, 200, 600, 600);
+  fill(255, 102, 0);
+  ellipse(500, 200, 100, 100);
 
-  strokeWeight(0);
-  fill(255)
-  ellipse(500, 200, 300, 300);
+
+
+
+
+
+
+
 
   //mountains
   fill(132, 147, 124);
