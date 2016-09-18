@@ -43,6 +43,7 @@ function draw() {
 
 
 //ball bouncing loop
+
 ellipse(b, height/2, 50, 50);
 
  b += speed;

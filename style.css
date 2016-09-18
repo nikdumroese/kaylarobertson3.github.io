@@ -7,6 +7,13 @@ h1 {
   margin: 0 0 0 0;
 }
 
+h2 {
+	font-family: "Roboto Condensed"; sans-serif;
+	color: black;
+}
+
+
+
 body {
     overflow: auto;
     margin: 0 0 0 0;
@@ -28,48 +35,32 @@ nav {
     	position: fixed;
       width: 100%;
       height: 50px;
+			z-index: 0;
     }
 
-nav li {
-        color: white;
-        padding-top: 15px;
-        margin-top: none;
-        list-style: none;
-        padding-right: 20px;
-        float: right;
-        font-family: "Roboto condensed"; serif;
+
+ .links {
+	 border-radius: 1em;
+	 border-radius: 1em;
+	 position: absolute;
+	 top: 60%;
+	 left: 50%;
+	 margin-right: -50%;
+	 transform: translate(-50%, -50%)
+}
 
 
-    }
-
-nav ul {
-
-        padding: 0 0 0 0;
-        margin: 0 0 0 0;
+a {
+	background-color: #993366;
+	color: white;
+	text-decoration: none;
+	padding: 1em;
+	position: center;
+	top: 60%;
+	font-family: "Roboto Condensed"; sans-serif;
 
 }
 
-.container img{
-
-      max-height: 400px;
-      max-width: 400px;
-      width: 300px;
-      height: 300px;
-      transform: rotate(90deg);
-      opacity: 0.8;
-          filter: alpha(opacity=40);}
-
-
-.links {
-  text-transform: lowercase;
-  font-family: "Roboto Condensed"; sans-serif;
-  list-style: none;
-  padding-left: 0px;
-
-}
-
-.links li {
-  float: left;
-  margin-right: 15px;
-
+a:hover {
+	background-color: black;
 }
