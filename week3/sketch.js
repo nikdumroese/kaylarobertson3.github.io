@@ -4,6 +4,9 @@ var y;
 var z;
 var speed = 0.5;
 var diameter = 20;
+var dir = 1;
+var b = 0;
+
 
 
 function setup() {
@@ -17,6 +20,11 @@ function draw() {
   //moving thing
   x += speed;
   arc(x, 60, radius, radius, 0.52, 6.76);
+
+  //loop test
+  for (var i = 0; i < 10; i++) {
+    rect(i*50, 200, 25, 25);
+  }
 
   //moving thing2
   x += speed;
@@ -32,12 +40,15 @@ function draw() {
   }
   rect(mouseX, mouseY, 80, 80);
 
-  //random element
-  z += random(-speed, speed);
-  y += random(-speed, speed);
-  ellipse(x, y, diameter, diameter);
 
 
+//ball bouncing loop
+ellipse(b, height/2, 50, 50);
+
+ b += speed;
+ if (b > width + 25) {
+   b = -25;
+ }
 
 
 }
