@@ -1,2 +1,2 @@
 <h1>Blog Entry for 3.1</h1>
-<p></p>
+<p>I'm really glad we're finally making things move on the canvas. I'm getting a bit confused when creating variables that have to apply to the whole sketch, though. If I was drawing a lot of different shapes on a canvas (aside from these simple circles), I could see it getting overwhelming when calling variables, but I'm sure it gets easier with more use. I'm also having trouble with the random function. The If/else mouse functions seem fairly straight forward, although I'm hoping soon I will be able to write them from memory instead of copying code from the book. .</p>

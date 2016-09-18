@@ -10,18 +10,24 @@ function setup() {
   createCanvas(windowWidth, windowHeight);
   rectMode (CENTER);
   ellipseMode (CENTER);
-  background (102, 204, 255, 100);
+  background (153, 255, 102);
 }
 
 function draw() {
+  //moving thing
+  x += speed;
+  arc(x, 60, radius, radius, 0.52, 6.76);
+  if (mouseIsPressed) {};
+
+
   //mouseresponse
   if (mouseIsPressed) {
-    fill(0);
+    fill(255, 80, 80);
   }
   else {
     fill(255);
   }
-  ellipse(mouseX, mouseY, 80, 80);
+  rect(mouseX, mouseY, 80, 80);
 
   //random element
   z += random(-speed, speed);
@@ -31,7 +37,4 @@ function draw() {
 
 
 
-  //moving thing
-  x += speed;
-  arc(x, 60, radius, radius, 0.52, 6.76);
 }
