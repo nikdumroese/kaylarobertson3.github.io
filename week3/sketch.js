@@ -18,6 +18,11 @@ function draw() {
   x += speed;
   arc(x, 60, radius, radius, 0.52, 6.76);
 
+  //moving thing2
+  x += speed;
+  arc(x, 300, radius, radius, 0.2, 4.35);
+
+
   //mouseresponse
   if (mouseIsPressed) {
     fill(255, 80, 80);
