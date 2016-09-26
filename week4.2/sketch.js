@@ -15,7 +15,7 @@ function draw() {
     for (var x = 50; x <= width-50; x += density) {
       for (var y = 50; y <= height-50; y+=density) {
         var s = map(count, 120, 0, 0, TWO_PI*2);
-        arc(x, y, 14, 14, s, s + PI);
+        arc(x, y, 7, 7, s, s + PI);
         count--;
       }
     }
@@ -28,7 +28,7 @@ function draw() {
       for (var y = 0; y < height+10; y += 20) {
           for (var x = 0; x < width+10; x += 20) {
             fill(random(255), random(255), random(255));
-            var d = 20;
+            var d = 7;
             ellipse (x + y, y, d, d);
         }
       }
