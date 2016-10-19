@@ -2,8 +2,8 @@
 // car constructor
 function Pacman()
 {
-  this.xpos = 10;
-  this.ypos = 200;
+  this.xpos = random(width);
+  this.ypos = random(height);
   this.speed = 10;
   this.radius = this.diam / 2;
   this.eyePos = this.diam / 2;

@@ -1,21 +1,29 @@
-var pacman;
+//var pacman;
+var pacmans = [];
+var numPacman = 12;
 
 function setup()
 {
   createCanvas(800, 600);
 
   // create the pacman
-  pacman = new Pacman();
+  pacmans = new Pacman();
+
+  // create multiple pacman
+  for(var i = 0; i < numPacman; i++)
+ {
+   pacmans[i] = new Pacman();
+ }
+
 }
 
 function draw()
 {
   background(140, 245, 246);
 
-
   // drive car
-  pacman.move();
+  pacmans.move();
 
-  // display the car
-  pacman.display();
+  // display the pacman
+  pacmans.display();
 }
