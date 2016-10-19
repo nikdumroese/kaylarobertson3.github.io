@@ -30,6 +30,7 @@ body {
       margin-right: -50%;
       transform: translate(-50%, -50%)
 
+
     }
 
 nav {
@@ -42,6 +43,7 @@ nav {
 
 
  .links {
+	 float: center;
 	 border-radius: 1em;
 	 border-radius: 1em;
 	 position: absolute;
@@ -61,6 +63,8 @@ a {
 	position: center;
 	top: 60%;
 	font-family: "Roboto Condensed"; sans-serif;
+	float: center;
+
 
 }
 
