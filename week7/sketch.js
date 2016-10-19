@@ -2,7 +2,7 @@ var pacman;
 
 function setup()
 {
-  createCanvas(windowWidth, windowHeight);
+  createCanvas(800, 600);
 
   // create the pacman
   pacman = new Pacman();
@@ -18,12 +18,4 @@ function draw()
 
   // display the car
   pacman.display();
-
-
-}
-
-function mousePressed()
-{
-  pacman.xpos = 0;
-  pacman.speed = 2;
 }
