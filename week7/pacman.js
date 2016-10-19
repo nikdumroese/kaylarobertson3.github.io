@@ -2,7 +2,7 @@
 // car constructor
 function Pacman()
 {
-  this.xpos = 0;
+  this.xpos = 10;
   this.ypos = 200;
   this.speed = 10;
   this.radius = this.diam / 2;
@@ -10,18 +10,34 @@ function Pacman()
   this.eyeDiam = this.diam / 2;
   this.mouthAngle = (1 / 7);
   this.mouthChange = 1/128;
-  this.change = 0;
+  this.change = 2;
   this.diam = 100;
   this.c = color("yellow");
 
-  // drive method
+  //movement hopefully
   this.move = function()
    {
      if(this.xpos > width) {
-
        this.speed = -this.speed;
      }
+
+     if(this.xpos < 10) {
+       this.speed = 10;
+     }
      this.xpos = this.xpos + this.speed;
+
+
+     //mouth move
+     this.mouthAngle = this.mouthAngle + ( this.mouthChange * this.change);
+	if( this.mouthAngle > (1/7) ){
+		this.mouthChange = -this.mouthChange;
+		this.mouthAngle = (1/7);
+	}
+	if( this.mouthAngle < 0.01 ){
+		this.mouthChange = -this.mouthChange;
+		this.mouthAngle = 0.03;
+	}
+
    };
 
 /* //edge check - not working :(
