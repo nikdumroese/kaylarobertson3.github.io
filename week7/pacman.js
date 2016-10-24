@@ -1,10 +1,24 @@
+/*
+TODO:
+
+2. stop on boundary
+3. random dir change
+4. rotate pacman
+5. awarness of other pacmen
+6. timer
+
+
+*/
+
+
 
 // car constructor
-function Pacman()
+function Pacman(xpos, ypos) //why xpos and y pos???
 {
   this.xpos = random(width);
   this.ypos = random(height);
   this.speed = 10;
+  this.direction = 'stopped';
   this.radius = this.diam / 2;
   this.eyePos = this.diam / 2;
   this.eyeDiam = this.diam / 2;
@@ -13,51 +27,42 @@ function Pacman()
   this.change = 2;
   this.diam = 100;
   this.c = color("yellow");
+}
+
 
   //movement hopefully
-  this.move = function()
-   {
-     if(this.xpos > width) {
-       this.speed = -this.speed;
-     }
+  Pacman.prototype.move = function () {
+    this.display();
+    if(this.xpos > width) {
+      this.speed = -this.speed;
+    }
+    if(this.xpos > width) {
+      scale(-1,1);
 
-     if(this.xpos < 10) {
-       this.speed = 10;
-     }
-     this.xpos = this.xpos + this.speed;
+    }
+    if(this.xpos < 10) {
+      this.speed = 10;
+    }
+    this.xpos = this.xpos + this.speed;
 
 
-     //mouth move
-     this.mouthAngle = this.mouthAngle + ( this.mouthChange * this.change);
-	if( this.mouthAngle > (1/7) ){
-		this.mouthChange = -this.mouthChange;
-		this.mouthAngle = (1/7);
-	}
-	if( this.mouthAngle < 0.01 ){
-		this.mouthChange = -this.mouthChange;
-		this.mouthAngle = 0.03;
-	}
+    //mouth move
+    this.mouthAngle = this.mouthAngle + ( this.mouthChange * this.change);
+    if( this.mouthAngle > (1/7) ){
+      this.mouthChange = -this.mouthChange;
+      this.mouthAngle = (1/7);
+    }
+    if( this.mouthAngle < 0.01 ){
+      this.mouthChange = -this.mouthChange;
+      this.mouthAngle = 0.03;
+    }
 
-   };
 
-/* //edge check - not working :(
-   if( this.xpos+this.radius >= width ){
- 		this.xpos = width-this.radius;
- 		this.xChange = 0;
- 	} else if ( this.xpos-this.radius <= 0 ){
- 		this.xpos = 0+this.radius;
- 		this.xChange = 0;
- 	}
-  if ( this.ypos+this.radius >= height ){
-		this.ypos = height-this.radius;
-		this.yChange = 0;
-	} else if ( this.ypos-this.radius <= 0 ){
-		this.ypos = 0+this.radius;
-		this.yChange = 0;
-	} */
+
+  };
 
   // display method
-  this.display = function()
+  Pacman.prototype.display = function()
   {
     fill(this.c);
     noStroke();
@@ -67,4 +72,3 @@ function Pacman()
     ellipse(this.xpos, this.ypos - 24, 15, 15);
 
   };
-}
