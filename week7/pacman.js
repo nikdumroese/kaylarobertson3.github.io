@@ -1,74 +1,159 @@
 /*
 TODO:
-
-2. stop on boundary
-3. random dir change
-4. rotate pacman
 5. awarness of other pacmen
-6. timer
+framerate is time in p5
+notes: random returns a float
 
+The PacMan should never repeat the same direction it is already traveling.
+"do while" loop
+
+unit circle
+
+random to do: open p5 sketch
+  mess around with translate, rotate, and push pop
 
 */
 
+// pacman construcor
+function Pacman() {
+    //this is the shape
+    this.diam = 100;
+    this.radius = this.diam / 2;
+    this.combinedR = this.radius * 2;
+    this.eyePos = this.diam / 2;
+    this.eyeDiam = this.diam / 2;
+    this.mouthAngle = (1 / 7);
+    this.mouthChange = 1 / 128;
 
+    // pos and movement
+    this.xpos = random(width);
+    this.ypos = random(height);
+    this.direction = 0;
+    this.change = 1;
 
-// car constructor
-function Pacman(xpos, ypos) //why xpos and y pos???
-{
-  this.xpos = random(width);
-  this.ypos = random(height);
-  this.speed = 10;
-  this.direction = 'stopped';
-  this.radius = this.diam / 2;
-  this.eyePos = this.diam / 2;
-  this.eyeDiam = this.diam / 2;
-  this.mouthAngle = (1 / 7);
-  this.mouthChange = 1/128;
-  this.change = 2;
-  this.diam = 100;
-  this.c = color("yellow");
+    // i don't know what these are
+    this.speedX = 0;
+    this.speedY = 0;
+    this.counter = 0;
+    this.maxTime = 10;
+    this.c = color("yellow");
 }
+//ends
 
-
-  //movement hopefully
-  Pacman.prototype.move = function () {
+// everything goes here
+Pacman.prototype.update = function() {
+    // call the other functions
+    this.move();
     this.display();
-    if(this.xpos > width) {
-      this.speed = -this.speed;
+    this.timer();
+};
+// ends update
+
+
+
+// move function
+Pacman.prototype.move = function() {
+
+    // boundary check on walls
+    if (this.xpos > width - this.radius) {
+        this.speedX = 0;
+        this.xpos = width - this.radius - 2;
+    } else if (this.xpos < 0 + this.radius) {
+        this.speedX = 0;
+        this.xpos = 0 + this.radius + 2;
+    } else if (this.ypos > height - this.radius) {
+        this.speedY = 0;
+        this.ypos = height - this.radius - 2;
+    } else if (this.ypos < 0 + this.radius) {
+        this.speedY = 0;
+        this.ypos = 0 + this.radius + 2;
     }
-    if(this.xpos > width) {
+    // text( this.xpos, 20, 10);
+    // text( this.ypos, 20, 20);
+    // text( this.speedX, 20, 30);
+    // text( this.speedY, 20, 40);
+    // end boundary check
+
+
+    //mouth movement
+    this.mouthAngle = this.mouthAngle + this.mouthChange;
+    if (this.mouthAngle > (1 / 7)) {
+        this.mouthChange = -this.mouthChange;
+        this.mouthAngle = (1 / 7);
+    }
+    if (this.mouthAngle < 0.01) {
+        this.mouthChange = -this.mouthChange;
+        this.mouthAngle = 0.03;
+    }
+    //end mouth movement
+
+    //update pacman position
+    this.xpos = this.xpos + this.speedX;
+    this.ypos = this.ypos + this.speedY;
+    //end update position
+};
+// end movement
+
+
+// display function
+Pacman.prototype.display = function() {
+
+    push();
+    translate(this.xpos, this.ypos);
+
+    if (this.direction === 0) {
+      //do nothing
+    } else if (this.direction === 1) {
+      rotate(PI * 0.5);
+    } else if (this.direction === 2) {
       scale(-1,1);
-
-    }
-    if(this.xpos < 10) {
-      this.speed = 10;
-    }
-    this.xpos = this.xpos + this.speed;
-
-
-    //mouth move
-    this.mouthAngle = this.mouthAngle + ( this.mouthChange * this.change);
-    if( this.mouthAngle > (1/7) ){
-      this.mouthChange = -this.mouthChange;
-      this.mouthAngle = (1/7);
-    }
-    if( this.mouthAngle < 0.01 ){
-      this.mouthChange = -this.mouthChange;
-      this.mouthAngle = 0.03;
+    } else if (this.direction === 3) {
+      rotate(-PI * 0.5);
     }
 
-
-
-  };
-
-  // display method
-  Pacman.prototype.display = function()
-  {
     fill(this.c);
     noStroke();
-    arc(this.xpos, this.ypos, this.diam, this.diam, PI * this.mouthAngle, -PI * this.mouthAngle, PIE);
+    arc(0,0, this.diam, this.diam, PI * this.mouthAngle, -PI * this.mouthAngle, PIE);
 
     fill("black");
-    ellipse(this.xpos, this.ypos - 24, 15, 15);
+    ellipse(0, -24, 15, 15);
 
-  };
+    pop();
+
+
+};
+//end diplay function
+
+//start timer function
+Pacman.prototype.timer = function() {
+    if (this.counter > this.maxTime) {
+        this.counter = 0;
+        this.changeDir();
+        this.maxTime = random(4 * frameRate());
+    } else {
+        this.counter++;
+    }
+};
+//end timer
+
+
+//start change direction function — called from timer funciton
+Pacman.prototype.changeDir = function() {
+    var r = int(random(4));
+    this.direction = r;
+    //East
+    if (this.direction === 0) {
+        this.speedX = random(10);
+        this.speedY = 0;
+    } else if (this.direction === 1) {
+        this.speedX = 0;
+        this.speedY = random(10);
+    } else if (this.direction === 2) {
+        this.speedX = random(-10);
+        this.speedY = 0;
+    } else if (this.direction === 3) {
+        this.speedX = 0;
+        this.speedY = random(-10);
+    }
+};
+//end changeDir

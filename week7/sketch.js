@@ -20,7 +20,7 @@ function draw()
 
 
 for (var i = 0; i < pacArray.length; i++) {
-  pacArray[i].move();
+  pacArray[i].update();
 }
 
 }
