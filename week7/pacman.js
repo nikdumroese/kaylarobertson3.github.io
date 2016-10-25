@@ -139,7 +139,12 @@ Pacman.prototype.timer = function() {
 
 //start change direction function — called from timer funciton
 Pacman.prototype.changeDir = function() {
-    var r = int(random(4));
+    var r;
+
+    do {
+      r = int(random(4));
+    } while (r === this.direction);
+
     this.direction = r;
     //East
     if (this.direction === 0) {
