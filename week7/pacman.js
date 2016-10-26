@@ -4,20 +4,34 @@ TODO:
 framerate is time in p5
 notes: random returns a float
 
-The PacMan should never repeat the same direction it is already traveling.
-"do while" loop
-
 unit circle
 
 random to do: open p5 sketch
   mess around with translate, rotate, and push pop
 
+  awarness function -- in move
+  if this wait is true, they won't move
+
+  if(!this.wait) {
+  then update the positions
+}
+
+if (this.wait is true  ) \\do nothing
+otherwise this.poxX+=this.speedX ---- tha tgoes into move function
+
+
+
+(array idx) function
+other function  -- pass array into the class function, pass index
+
+
+for (pac array . length) if i does not equal idk
 */
 
 // pacman construcor
 function Pacman() {
     //this is the shape
-    this.diam = 100;
+    this.diam = 80;
     this.radius = this.diam / 2;
     this.combinedR = this.radius * 2;
     this.eyePos = this.diam / 2;
@@ -30,6 +44,7 @@ function Pacman() {
     this.ypos = random(height);
     this.direction = 0;
     this.change = 1;
+    this.wait = false;
 
     // i don't know what these are
     this.speedX = 0;
@@ -112,15 +127,12 @@ Pacman.prototype.display = function() {
     }
 
     fill(this.c);
-    noStroke();
+    stroke(244, 227, 5);
     arc(0,0, this.diam, this.diam, PI * this.mouthAngle, -PI * this.mouthAngle, PIE);
 
     fill("black");
     ellipse(0, -24, 15, 15);
-
     pop();
-
-
 };
 //end diplay function
 
@@ -160,5 +172,30 @@ Pacman.prototype.changeDir = function() {
         this.speedX = 0;
         this.speedY = random(-10);
     }
-};
+
+
+
 //end changeDir
+//
+// // check pos
+// Pacman.prototype.changeDir = function (newArray, idx) {
+//   //need to know x,y, speed, radius and dir
+//   var otherX = 0;
+//   var otherY = 0;
+//   var otherR = 0;
+//   var distance = 0;
+//   var maxDistance = 0;
+//
+//   for (var i = 0; i < newArray.length; i++) {
+//
+//     if (idx != i) {
+//       otherX = newArray[i].xpos;
+//
+//     }
+//
+//   }
+
+
+
+
+};
