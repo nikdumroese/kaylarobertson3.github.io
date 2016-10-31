@@ -127,7 +127,8 @@ Pacman.prototype.display = function() {
     }
 
     fill(this.c);
-    stroke(244, 227, 5);
+    stroke(0.5);
+    stroke("white");
     arc(0,0, this.diam, this.diam, PI * this.mouthAngle, -PI * this.mouthAngle, PIE);
 
     fill("black");
