@@ -1,0 +1,25 @@
+
+
+h1 {
+    position: relative;
+    left: 150px;
+    bottom: 0;
+    font-size: 50pt;
+    font-family: sans-serif; "Helvetica";
+    background-color: rgba(255, 0, 0, 0);
+}
+
+h2 {
+    position: relative;
+    left: 150px;
+    font-size: 15pt;
+    font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+    font-weight: 300;
+    background-color: rgba(255, 0, 0, 0);
+}
+
+
+body {
+  background-color: rgba(255, 0, 0, 0);
+
+}
