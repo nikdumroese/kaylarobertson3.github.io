@@ -8,6 +8,8 @@ I want to display the data overtime, and have an option for the user to click on
 
 An example of a similar, although much more in-dpth project, is the baby name graphic from Visual Cinnamon: http://www.visualcinnamon.com/babynamesus. Although this uses d3 and I will be only using p5, html and css.
 
+![Screen shot 2](https://github.com/kaylarobertson3/kaylarobertson3.github.io/blob/master/FinalProjectProposal/Screen%20Shot%202016-11-13%20at%2011.58.41%20PM.png)
+
 The main part will be this interactive line chart with tooltips of data points. Other smaller charts I also want to make to show interesting points of the data could be:
 
 * pie chart of delay percentages by season, that would change with airport and with year drop dropdown
