@@ -1,5 +1,5 @@
 
-var url = "http://api.openweathermap.org/data/2.5/forecast/daily?q=missoula,usa&cnt=10&mode=json&APPID=35cb08cad8871256be495532f117b1ff";
+var url = "https://api.openweathermap.org/data/2.5/forecast/daily?q=missoula,usa&cnt=10&mode=json&APPID=35cb08cad8871256be495532f117b1ff";
 
 
 function setup() {
