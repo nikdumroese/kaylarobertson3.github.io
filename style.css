@@ -53,6 +53,16 @@ nav {
 	 transform: translate(-50%, -50%)
 }
 
+.links2  {
+	 float: center;
+	 border-radius: 1em;
+	 border-radius: 1em;
+	 position: absolute;
+	 top: 60%;
+	 left: 50%;
+	 margin-right: -50%;
+	 transform: translate(-50%, -50%)
+}
 
 a {
 	background-color: #993366;
