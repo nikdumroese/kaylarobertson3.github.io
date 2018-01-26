@@ -14,16 +14,13 @@
 
 // NAVIGATION
 $('#aboutLink').on('click', function() {
-    console.log("about clicked");
     $('#work').fadeOut('fast');
     $('#about').fadeIn('fast');
 
 });
 
 $('#workLink').on('click', function() {
-    console.log("work clicked");
     $('#about').fadeOut('fast');
-    // $('#work').fadeIn('fast');
     $('#work').fadeIn('fast');
 });
 
@@ -37,6 +34,7 @@ $.ajax({
     },
     error: function(error, reason) {
         console.log("error getting projects", reason);
+        $('#projects').append('<div class="project"><p class="error">Error getting projects. Try refreshing! :)</div>');
     }
 });
 
@@ -62,13 +60,6 @@ function pushProjects(projects) {
                 return item.id == clickedId;
             });
             console.log(filtered);
-
-            // var clickedId = this.id;
-            // console.log(id, " was clicked");
-            // console.log('clickedProject is', clickedProject);
-            // $('#work').fadeOut('fast');
-            // $('#singleImage').fadeIn('fast');
-            // $('#singleImage');
         });
 
     }
