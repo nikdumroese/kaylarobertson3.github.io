@@ -1,83 +1,382 @@
+/* =================== MAIN =================== */
 
-h1 {
-	font-family: "Roboto Condensed"; sans-serif;
-	font-size: 60px;
-	color: black;
-	text-transform: none;
-	padding: 20px;
+	*,
+	*:after,
+	*::before {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-h2 {
-	font-family: "Roboto Condensed"; sans-serif;
-	color: black;
-	padding-bottom: 20px;
-	padding-top: 50px;
-	bottom: 20%;
+html {
+	/* background-color: #F7F9FB; */
+	background-color: white;
+}
+
+#all {
+	margin: 2rem 4rem 2rem 4rem;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	/* align-items: flex-start; */
 }
 
 
-body {
-    overflow: auto;
-    margin: 0 0 0 0;
-
-}
-.container {
-      border-radius: 1em;
-      padding: 2em;
-      position: absolute;
-      top: 50%;
-      left: 50%;
-      margin-right: -50%;
-      transform: translate(-50%, -50%)
-
-
-    }
-
-nav {
-    	background-color: black;
-    	position: fixed;
-      width: 100%;
-      height: 50px;
-			z-index: 0;
-    }
-
-
- .links {
-	 float: center;
-	 border-radius: 1em;
-	 border-radius: 1em;
-	 position: absolute;
-	 top: 60%;
-	 left: 50%;
-	 margin-right: -50%;
-	 transform: translate(-50%, -50%)
-}
-
-.links2  {
-	 float: center;
-	 border-radius: 1em;
-	 border-radius: 1em;
-	 position: absolute;
-	 top: 80%;
-	 left: 50%;
-	 margin-right: -50%;
-	 transform: translate(-50%, -50%)
+.flex-wrapper {
+	/* flex: 1; */
+	/* display: flex; */
+	/* flex-direction: column;
+	justify-content: center; */
+	min-height: 100vh;
 }
 
 a {
-	background-color: #993366;
-	border-radius: 6px;
-	color: white;
 	text-decoration: none;
-	padding: .6em;
-	position: center;
-	top: 60%;
-	font-family: "Roboto Condensed"; sans-serif;
-	float: center;
+}
+
+/* ============= UNVERLINE ON HOVER ============= */
+
+.hov {
+	display: inline;
+	position: relative;
+	z-index: 2;
+	padding-bottom: 1px;
+	cursor: pointer;
+}
+
+.hov:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  width: 3px;
+  height: 3px;
+  padding-top: 5px;
+  left: 0%;
+  top: 99%;
+}
+
+.hov:after {
+	-webkit-transition: all 0.3s ease;
+	-moz-transition: all 0.3s ease;
+	-ms-transition: all 0.3s ease;
+	-o-transition: all 0.3s ease;
+	transition: all 0.3s ease;
+}
+
+.hov:hover:after{
+  width: 100%;
+  height: 3px;
+}
+
+.hov:hover:after,
+.hov:focus:after {
+	outline: 0;
+	background-color: rgb(228, 98, 90);
+	-webkit-transition:  all 0.3s ease;
+	   -moz-transition:  all 0.3s ease;
+	    -ms-transition:  all 0.3s ease;
+	     -o-transition:  all 0.3s ease;
+	        transition:  all 0.3s ease;
+}
+
+
+
+
+/* =================== TEXT =================== */
+
+h1 {
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 700;
+    font-size: 60px;
+    margin: 3rem 0 0 0;
+	line-height: 1.5;
+	color: black;
+	text-align: left;
+}
+
+h2 {
+	color: #7a7e82;
+	text-transform: uppercase;
+	letter-spacing: 3px;
+	font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    font-size: 16px;
+    line-height: normal;
+	line-height: 1.5;
+	text-align: left;
+}
+
+p {
+	line-height: 1.5;
+	font-size: 15px;
+}
+
+/* =================== NAV =================== */
+
+#nav {
+	margin-top: 1rem;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	justify-content: left;
+	align-items: center;
+}
+
+.navlinks {
+	font-size: 15px;
+	font-weight: 700;
+	letter-spacing: 2px;
+	color: #adadad;
+	margin: 1rem 1rem 1rem 0;
+	font-family: 'Open Sans', sans-serif;
+	text-decoration: none;
+}
+
+/* =================== ABOUT =================== */
+#about {
+	/* margin: 0 auto; */
+	display: none;
+	width: 85%;
+}
+
+#aboutWrapper {
+	display: flex;
+    /* justify-content: flex-start; */
+	/* align-items: flex-start; */
+	margin: 3rem 0 0 0;
+}
+
+#aboutLeftCol {
+	margin: 1.5rem 0 0 0;
+}
+
+#aboutRightCol {
+	margin: 1.5rem;
+}
+
+#me {
+	width: 100%;
+	max-width: 1000px;
+	min-width: 200px;
+}
+
+#about p {
+	color: #7a7e82;
+	font-family: 'Open Sans', sans-serif;
+	margin: 0 0 1rem 0;
+}
+
+#about a {
+	font-weight: 600;
+	text-decoration: none;
+	color: #1D263F;
+}
+
+.connect {
+	list-style: none;
+	padding: 0;
+	text-align: center;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: flex-start;
+}
+
+.connect li {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 13px;
+	letter-spacing: 2px;
+	color: #adadad;
+	text-align: center;
+	line-height: 2;
+	margin-right: 1rem;
+}
+
+/* =================== PROJECTS =================== */
+
+#work {
+	margin: 3rem 0 0 0;
+}
+
+#projects {
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
+	max-width: 1600px;
+}
+
+/*=================== Individual Project Card ===================**/
+
+.project {
+	width: 30%;
+	margin-right: 2%;
+	margin-bottom: 40px;
+	flex-grow: 1;
+	flex-shrink: 1;
+	min-width: 250px;
+	max-width: 550px;
+}
+
+.projectimg {
+	width: 100%;
+	box-shadow: 0 0 70px #ddd;
+    padding: 5px;
+    display: block;
+    margin: 0 auto;
+}
+
+
+/* .project:hover {
+	filter: brightness(50%);
+	transition: 0.3s;
+} */
+
+.title {
+	font-size: 16px;
+	font-family: 'Open Sans', sans-serif;
+	font-weight: bold;
+	margin: 1rem 0;
+}
+
+.desc {
+	font-family: 'Open Sans', sans-serif;
+	font-size: 14px;
+	font-weight: 400;
+	margin: .5rem 0;
+}
+
+.tech {
+	font-family: 'Open Sans', sans-serif;
+	color: #adadad;
+	font-size: 11px;
+	text-transform: uppercase;
+	letter-spacing: 1.5px;
+
+}
+
+.mobile-desc {
+	display: none;
+}
+
+/* =================== SINGLE PROJECT =================== */
+
+/* .singleProject img {
+	box-shadow: 0 0 70px #ddd;
+    border: 1px solid #eee;
+    padding: 10px;
+    display: block;
+    margin: 0 auto 30px;
+} */
+
+
+/* =================== FOOTER =================== */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-start;
+	align-items: flex-start;
+	color: #adadad;
+	letter-spacing: 1.5px;
+}
+
+footer p {
+	font-family: 'Open Sans', sans-serif;
+	text-align: left;
+	font-size: 75%;
+}
+
+/* =================== SOCIAL =================== */
+
+#social  {
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+}
+
+#social ul {
+	list-style-type: none;
+	display: flex;
+	flex-wrap: wrap;
+	flex-direction: row;
+	padding: 0;
+	margin: 0;
+}
+
+#social i {
+	margin-right: .5rem;
+	color: #adadad;
+	font-size: 20px;
+}
+
+#social i:hover {
+	filter: opacity(50%);
+}
+
+/* =================== MEDIA QUERIES =================== */
+
+@media only screen and (min-width: 1300px) {
+	#all {
+		margin: 3rem 8rem 3rem 8rem;
+	}
+}
+
+@media only screen and (max-width: 900px) {
+	#all {
+		margin: 1rem 2rem 1rem 2rem;
+	}
+
+	h1 {
+		font-size: 48px;
+	}
+
+	#about {
+		width: 100%;
+	}
 
 
 }
 
-a:hover {
-	background-color: black;
+/* AT 700 change to large image on single image page*/
+
+@media only screen and (max-width: 700px) {
+
+
+	#aboutWrapper {
+		display: flex;
+		flex-wrap: wrap;
+		margin: 2rem 0 0 0;
+	}
+
+	#aboutLeftCol {
+		margin: 0rem;
+	}
+
+	#aboutRightCol {
+		margin: 2rem 0 0 0;
+	}
+
+}
+
+
+@media only screen and (max-width: 595px) {
+	.project {
+		margin-right: 0;
+	}
+
+	h1 {
+		font-size: 35px;
+	}
+
+	h2 {
+		font-size: 14px;
+	}
+}
+
+
+@media only screen and (max-width: 401px) {
+	.project {
+		margin: 1rem 0rem;
+	}
 }
