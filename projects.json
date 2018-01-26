@@ -1,6 +1,7 @@
 [
     {
         "title": "Montana Breweries",
+        "shortDesc":"Leaflet map of breweriers and population in Montana.",
         "desc":"Used Leaflet.js, HTML and CSS to map breweries in Montana and county populations. Based off a NICAR 2016 presentation by Chris Essig.",
         "tech": "Leaflet.js, JQuery",
         "pub": "",
@@ -10,7 +11,8 @@
     },
     {
         "title": "The Meth Effect",
-        "desc":"Co-built and designed the website for The Montana Meth Effect, a University of Montana Journalism School project uncovering the effects of methamphetamine in Montana. ",
+        "shortDesc":"Co-built and designed the website for The Montana Meth Effect, a University of Montana Journalism School project uncovering the effects of methamphetamine in Montana.",
+        "desc":"Co-built and designed the website for The Montana Meth Effect, a University of Montana Journalism School project uncovering the effects of methamphetamine in Montana.",
         "pub": "University of Montana School of Journalism",
         "viewProject": "https://metheffect.com",
         "img": "projects/metheffect.png",
@@ -35,41 +37,17 @@
         "id": 3
     },
     {
-        "title": "Infographic: Border closures and migrant daily death count",
-        "desc":"Reported and designed infographics for Burying the Dead, a story examining death and the refugee crisis.",
-        "tech": "Excel, Adobe Illustrator",
+        "title": "Infographics: Missoula to Berlin",
+        "desc":"Reported and designed infographics for Burying the Dead, a story examining death and the refugee crisis. Data from the Migrant Files",
+        "tech": "Excel, Adobe Illustrator, Tableau",
         "pub": "Missoula to Berlin",
         "viewProject": "https://missoulatoberlin.com/portfolio/burying-the-dead/",
+        "viewProject2": "https://public.tableau.com/shared/7PNKM9N5Z?:toolbar=no&:display_count=no",
         "img": "projects/borderclosures.png",
+        "img2": "projects/refugeedeaths.png",
+        "img3": "projects/islamicburial.png",
+        "img4": "projects/refugeedeathstoeurope.png",
         "id": 4
-    },
-    {
-        "title": "Infographic: Refugee deaths and arrivals",
-        "desc":"Reported and designed infographics for Burying the Dead, a story examining death and the refugee crisis.",
-        "tech": "Tableau",
-        "pub": "Missoula to Berlin",
-        "viewProject": "https://public.tableau.com/shared/7PNKM9N5Z?:toolbar=no&:display_count=no",
-        "onPhotoClick": "https://public.tableau.com/shared/7PNKM9N5Z?:toolbar=no&:display_count=no",
-        "img": "projects/refugeedeaths.png",
-        "id": "5"
-    },
-    {
-        "title": "Infographic: Islamic burial practices",
-        "desc":"Reported and designed infographics for Burying the Dead, a story examining death and the refugee crisis.",
-        "tech": "Adobe Illustrator",
-        "pub": "Missoula to Berlin",
-        "viewProject": "https://missoulatoberlin.com/portfolio/burying-the-dead/",
-        "img": "projects/islamicburial.png",
-        "id": "6"
-    },
-    {
-        "title": "Infographic: Refugee deaths on the route to Europe",
-        "desc":"Reported and designed infographics for Burying the Dead, a story examining death and the refugee crisis.",
-        "tech": "Adobe Illustrator",
-        "pub": "Missoula to Berlin",
-        "viewProject": "https://missoulatoberlin.com/portfolio/burying-the-dead/",
-        "img": "projects/refugeedeathstoeurope.png",
-        "id": "7"
     },
     {
         "title": "Web design: Center for Children, Families and Workforce Development",
@@ -112,7 +90,7 @@
         "id": "11"
     },
     {
-        "title": "Montana College Scorecard",
+        "title": "Web design: Zentz Accessible Design",
         "desc":"Web design and branding for Zentz Accessible Design, an accessibility consultant firm.",
         "tech": "HTML/CSS, Adobe Illustrator",
         "pub": "Zentz Accessible Design",
@@ -139,6 +117,8 @@
         "viewProject": "https://www.denverpost.com/2017/07/09/oil-gas-colorado-highest-paid-executives/",
         "onPhotoClick": "https://www.denverpost.com/2017/07/09/oil-gas-colorado-highest-paid-executives/",
         "img": "projects/executivepay.gif",
+        "img2": "projects/executivepay2.png",
+        "iframe": "https://extras.denverpost.com/projects/2017/executivepay/index.html",
         "id": "14"
     },
     {
