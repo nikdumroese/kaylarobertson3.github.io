@@ -25,7 +25,8 @@ html {
 }
 
 .flex-wrapper {
-    min-height: 100vh;
+    min-height: 95vh;
+    margin-bottom: 1rem;
 }
 
 a {
@@ -216,7 +217,7 @@ p {
     box-shadow: 0 0 70px #ddd;
     padding: 5px;
     display: block;
-    margin: 0 auto;
+    margin: 0 0 1rem 0;
 }
 
 /* .project:hover {
@@ -299,9 +300,19 @@ iframe {
     width: 100%;
     height: 600px;
 }
+
+.viewProject {
+    font-size: 15px;
+    font-weight: 700;
+    /* letter-spacing: 2px; */
+    color: black;
+    font-family: 'Open Sans', sans-serif;
+    text-decoration: none;
+}
 /* =================== FOOTER =================== */
 
 footer {
+    margin-top: 2rem;
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
