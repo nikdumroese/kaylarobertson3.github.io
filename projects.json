@@ -14,8 +14,10 @@
         "shortDesc":"Co-built and designed the website for The Montana Meth Effect, a University of Montana Journalism School project uncovering the effects of methamphetamine in Montana.",
         "desc":"Co-built and designed the website for The Montana Meth Effect, a University of Montana Journalism School project uncovering the effects of methamphetamine in Montana.",
         "pub": "University of Montana School of Journalism",
+        "tech": "HTML/CSS, web hosting",
         "viewProject": "https://metheffect.com",
         "img": "projects/metheffect.png",
+        "img2": "projects/metheffect.png",
         "id": 1
     },
     {
@@ -42,7 +44,7 @@
         "tech": "Excel, Adobe Illustrator, Tableau",
         "pub": "Missoula to Berlin",
         "viewProject": "https://missoulatoberlin.com/portfolio/burying-the-dead/",
-        "viewProject2": "https://public.tableau.com/shared/7PNKM9N5Z?:toolbar=no&:display_count=no",
+        "iframe": "https://public.tableau.com/shared/7PNKM9N5Z?:toolbar=no&:display_count=no",
         "img": "projects/borderclosures.png",
         "img2": "projects/refugeedeaths.png",
         "img3": "projects/islamicburial.png",
