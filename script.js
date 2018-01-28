@@ -52,7 +52,7 @@ function pushProjects(projects) {
         var tech = projects[proj]["tech"];
         var id = projects[proj]["id"];
 
-        $('#projects').append('<div class="project"><img class="projectimg" src="' + thumb + '" alt="' + title + '"/><div class="photo-text"><h3 class="title" id="' + id + '">' + title + '</h3><div class="mobile-desc"><p class="mobileTitle">' + title + '</div>');
+        $('#projects').append('<div class="project" id="' + id + '"><div class="projectimg"><div class="photo-text"><h3 class="cardTitle hov">' + title + '</h3></div><img src="' + thumb + '" alt="' + title + '"/></div></div><div class="mobile-desc"><p class="mobileTitle">' + title + '</div>');
     }
 
 }
@@ -61,7 +61,7 @@ function pushProjects(projects) {
 
 // SHOW SINGLE PROJECT
 function showSingleProject(projects) {
-    $('.title').on('click', function() {
+    $('.project').on('click', function() {
         $('#work').fadeOut('fast');
         $('#singleProject').empty();
         $(window).scrollTop(0);
@@ -92,7 +92,6 @@ function showSingleProject(projects) {
         } else if (!filtered[0].img3) {
             $('#singleProject').append('<p class="back hov">CLOSE <i class="fa fa-times-circle" aria-hidden="true"></i></p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/></div></div> ');
         }
-
         else if (!filtered[0].img4) {
             $('#singleProject').append('<p class="back hov">CLOSE <i class="fa fa-times-circle" aria-hidden="true"></i></p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/><img class="singleProjectImg" alt="'+alt3+'"src="'+clickedImg3+'"/></div></div> ');
         } else {
@@ -110,7 +109,6 @@ function showSingleProject(projects) {
             $('#work').fadeIn('fast');
             $('#about').hide('');
             $('#singleProject').hide();
-
         });
     });
 }

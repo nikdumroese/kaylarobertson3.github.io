@@ -203,9 +203,11 @@ p {
 /*=================== Individual Project Card ===================**/
 
 .project {
+    position: relative;
     width: 30%;
-    margin-right: 2%;
-    margin-bottom: 40px;
+    overflow: hidden;
+    margin-right: 3.3%;
+    margin-bottom: 3rem;
     flex-grow: 1;
     flex-shrink: 1;
     min-width: 250px;
@@ -215,40 +217,79 @@ p {
 .projectimg {
     width: 100%;
     box-shadow: 0 0 70px #ddd;
-    padding: 5px;
     display: block;
-    margin: 0 0 1rem 0;
+    margin: 0;
+    overflow: hidden;
 }
 
-/* .project:hover {
-	filter: brightness(50%);
-	transition: 0.3s;
-} */
+.projectimg img {
+    max-width: 100%;
+    -moz-transition: all 0.3s;
+    -webkit-transition: all 0.3s;
+    transition: all 0.3s;
+}
 
-.title {
+.project:hover img {
+    -moz-transform: scale(1.05);
+    -webkit-transform: scale(1.05);
+    transform: scale(1.05);
+    filter: brightness(80%);
+    cursor: pointer;
+}
+
+.cardTitle {
     font-size: 16px;
     font-family: 'Open Sans', sans-serif;
     font-weight: bold;
     margin: 0rem 0;
+    padding: 0;
+    z-index: 1000;
 }
 
-.desc {
+.photo-text {
+    z-index: 1000;
+    font-size: 20px;
     font-family: 'Open Sans', sans-serif;
-    font-size: 14px;
     font-weight: 400;
-    margin: .5rem 0;
+    margin: 3rem 0 0 0;
+    position: absolute;
+    top: auto;
+    bottom: 0;
+    opacity: 0;
+    left: 0;
+    width: 100%;
+    height: 50%;
+    background-color: rgba(43, 43, 43, 0.67);
+    padding: 2rem 1rem 1rem 1rem;
+    -webkit-transform: translateY(50%);
+            transform: translateY(50%);
+    -webkit-backface-visibility: hidden;
+            backface-visibility: hidden;
+    -webkit-transition: opacity 0.1s 0.3s, -webkit-transform 0.3s;
+    transition: opacity 0.1s 0.3s, -webkit-transform 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s;
+    transition: transform 0.4s, opacity 0.1s 0.3s, -webkit-transform 0.3s;
 }
 
-.tech {
-    font-family: 'Open Sans', sans-serif;
-    color: #adadad;
-    font-size: 11px;
-    text-transform: uppercase;
-    letter-spacing: 1.5px;
+.photo-text h3 {
+    color: white;
 }
 
-.mobile-desc {
+.project:hover .photo-text {
+    opacity: 1;
+      -webkit-transform: translateY(0px);
+              transform: translateY(0px);
+      -webkit-transition: opacity 0.1s, -webkit-transform 0.4s;
+      transition: opacity 0.1s, -webkit-transform 0.4s;
+      transition: transform 0.4s, opacity 0.1s;
+      transition: transform 0.4s, opacity 0.1s, -webkit-transform 0.4s;
+    }
+
+
+.mobileTitle {
     display: none;
+    font-weight: bold;
+    margin-bottom: 1rem;
 }
 
 /* =================== SINGLE PROJECT =================== */
@@ -287,7 +328,7 @@ p {
 
 .single img {
     width: 100%;
-    max-width: 1000px;
+    max-width: 800px;
     min-width: 200px;
     width: 100%;
     box-shadow: 0 0 70px #ddd;
@@ -309,6 +350,35 @@ iframe {
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
 }
+
+.title {
+    font-size: 20px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: bold;
+    margin: 0rem 0;
+}
+
+.desc {
+    font-family: 'Open Sans', sans-serif;
+    font-size: 16px;
+    font-weight: 400;
+    margin: .5rem 0;
+}
+
+.tech {
+    font-family: 'Open Sans', sans-serif;
+    color: #adadad;
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+}
+
+.pub {
+    font-family: 'Open Sans', sans-serif;
+    color: #adadad;
+    font-style: italic;
+}
+
 /* =================== FOOTER =================== */
 
 footer {
@@ -376,16 +446,18 @@ footer p {
     }
 }
 
-
 @media only screen and (max-width: 700px) {
+
     #aboutWrapper {
         display: flex;
         flex-wrap: wrap;
         margin: 2rem 0 0 0;
     }
+
     #aboutLeftCol {
         margin: 0rem;
     }
+
     #aboutRightCol {
         margin: 2rem 0 0 0;
     }
@@ -397,14 +469,32 @@ footer p {
 
     .singleLeftCol {
         margin: 0rem;
-        flex:none;
+        flex: none;
         width: 100%;
     }
 
     .singleRightCol {
         margin: 2rem 0 0 0;
-        flex:none;
+        flex: none;
         width: 100%;
+    }
+
+    .mobileTitle {
+        display: block;
+        cursor: pointer;
+    }
+
+    .projectimg:hover img {
+        filter: none;
+    }
+
+    .photo-text {
+        display: none;
+    }
+
+    .project:hover img {
+        filter: brightness(100%);
+        cursor: pointer;
     }
 
 }
