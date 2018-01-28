@@ -308,7 +308,7 @@ p {
 }
 
 .back {
-    margin: 3rem 1.5rem 1rem 0;
+    /* margin: 3rem 1.5rem 1rem 0; */
     align-self: flex-start;
     font-size: 15px;
     font-weight: 700;
@@ -472,7 +472,7 @@ footer p {
 
     .single {
         flex-wrap: wrap;
-        margin: 0rem 0 0 0;
+        margin: 2rem 0 0 0;
     }
 
     .singleLeftCol {
@@ -530,5 +530,16 @@ footer p {
 
     #all {
         margin: 1rem 1rem 1rem 1rem;
+    }
+
+    #intro h2 {
+        letter-spacing: 0;
+    }
+}
+
+@media only screen and (max-width: 350px) {
+
+    h1 {
+        font-size: 30px;
     }
 }

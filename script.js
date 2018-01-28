@@ -3,7 +3,6 @@
         url: "projects.json",
         type: "GET",
         success: function(projects) {
-            console.log("projects", projects);
             pushProjects(projects);
             showSingleProject(projects);
         },
@@ -87,15 +86,15 @@ function showSingleProject(projects) {
         var iframe = filtered[0].iframe;
 
         if (!filtered[0].img2) {
-            $('#singleProject').append('<p class="back hov"> <i class="fa fa-times-circle" aria-hidden="true"></i> CLOSE</p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/></div></div> ');
+            $('#singleProject').append('<div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a><br/><br/><p class="hov viewProject id="back"">Back→</p></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/></div></div> ');
 
         } else if (!filtered[0].img3) {
-            $('#singleProject').append('<p class="back hov"> <i class="fa fa-times-circle" aria-hidden="true"></i> CLOSE</p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/></div></div> ');
+            $('#singleProject').append('<div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a><br/><br/><p class="hov viewProject id="back"">Back→</p></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/></div></div> ');
         }
         else if (!filtered[0].img4) {
-            $('#singleProject').append('<p class="back hov"> <i class="fa fa-times-circle" aria-hidden="true"></i> CLOSE</p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/><img class="singleProjectImg" alt="'+alt3+'"src="'+clickedImg3+'"/></div></div> ');
+            $('#singleProject').append('<div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a><br/><br/><p class="hov viewProject id="back"">Back→</p></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/><img class="singleProjectImg" alt="'+alt3+'"src="'+clickedImg3+'"/></div></div> ');
         } else {
-            $('#singleProject').append('<p class="back hov"> <i class="fa fa-times-circle" aria-hidden="true"></i> CLOSE</p><div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/><img class="singleProjectImg" alt="'+alt3+'"src="'+clickedImg3+'"/><img class="singleProjectImg" alt="'+alt4+'"src="'+clickedImg4+'"/></div></div> ');
+            $('#singleProject').append('<div class="single"><div class="singleLeftCol"><h3 class="title">'+clickedTitle+'</h3><p class="pub">'+clickedPub+'</p><p class="desc">'+clickedDesc+'</p><p class="tech">'+clickedTech+'</p><br/><a class="hov" href="'+viewProject+'"><p class="hov viewProject">View Project→</p></a><br/><br/><p class="hov viewProject id="back"">Back→</p></div><div class="singleRightCol"><img class="singleProjectImg" alt="'+alt+'"src="'+clickedImg+'"/><img class="singleProjectImg" alt="'+alt2+'"src="'+clickedImg2+'"/><img class="singleProjectImg" alt="'+alt3+'"src="'+clickedImg3+'"/><img class="singleProjectImg" alt="'+alt4+'"src="'+clickedImg4+'"/></div></div> ');
         }
 
         if (filtered[0].iframe) {
@@ -104,7 +103,7 @@ function showSingleProject(projects) {
 
         $('#singleProject').fadeIn('fast');
 
-        $('.back').on('click', function() {
+        $('#back').on('click', function() {
             $('#singleProject').fadeOut('fast');
             $('#work').fadeIn('fast');
             $('#about').hide('');
