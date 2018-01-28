@@ -224,21 +224,13 @@
         "id": "19"
     },
     {
-        "title": "Infographic: Montana's beer ranking",
-        "desc": "Fun infographic about Montana's beer consumption and hangover prevention",
-        "tech": "Adobe Illustrator",
-        "pub": "UM Journalism school class",
-        "thumb": "projects/thumbs/beergraphic.png",
-        "img": "projects/beergraphic.png",
-        "id": "21"
-    },
-    {
         "title": "Nuggets NBA draft selection's first seasons",
         "desc": "The Nuggets NBA draft selections' first seasons",
         "tech": "Adobe Illustrator",
         "pub": "Denver Post",
         "viewProject": "https://www.denverpost.com/2017/06/21/denver-nuggets-nba-draft-preview-analysis/",
         "thumb": "projects/thumbs/nuggets.png",
+        "img": "projects/thumbs/nuggets.png",
         "iframe": "https://extras.denverpost.com/projects/2017/NBADraftPreview/index.html",
         "id": "22"
     },
@@ -276,16 +268,5 @@
         "img": "projects/mtbreweries.png",
         "alt": "montana breweries map",
         "id": 0
-    },
-    {
-        "title": "Montana College Scorecard",
-        "desc": "My first attempt at making an interactive infographic with D3 for a creative coding class final project, based off a D3 demonstration from NICAR 2016. The animation is a bit underwhelming as there's not much disparity between years in the dataset, but it was fun to mess around with D3.",
-        "tech": "D3.js, HTML/CSS",
-        "pub": "Creative coding class",
-        "viewProject": "https://kaylarobertson3.github.io/191_Final/",
-        "thumb": "projects/thumbs/montanacollegescorecard.png",
-        "img": "projects/montanacollegescorecard.png",
-        "alt": "Scatterplot showing colleges in Montana's tutions vs enrollment. Montana State has both the hightest enrollment and tuition.",
-        "id": "11"
     }
 ]
