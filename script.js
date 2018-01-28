@@ -31,13 +31,12 @@ $('#workLink').on('click', function() {
 
 });
 
-$('#closeSingleProject').on('click', function() {
+$('#back').on('click', function() {
     $(window).scrollTop(0);
     $('#singleProject').fadeOut('fast');
     $('#work').fadeIn('fast');
     $('#about').hide('');
     $('#singleProject').hide();
-
 });
 
 
