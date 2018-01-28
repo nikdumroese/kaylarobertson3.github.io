@@ -527,4 +527,8 @@ footer p {
     #work {
         margin: 1rem 0 2rem 0;
     }
+
+    #all {
+        margin: 1rem 1rem 1rem 1rem;
+    }
 }
