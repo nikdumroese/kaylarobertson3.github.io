@@ -3,6 +3,7 @@
         url: "projects.json",
         type: "GET",
         success: function(projects) {
+            $("#work").css("display", "block");
             pushProjects(projects);
             showSingleProject(projects);
         },
@@ -18,25 +19,31 @@
 $('#aboutLink').on('click', function() {
     $(window).scrollTop(0);
     $('#work').fadeOut('fast');
+    $("#work").addClass("hide");
     $('#about').fadeIn('fast');
+    $("#about").removeClass("hide");
     $('#singleProject').hide();
-
+    $("#singleProject").addClass("hide");
 });
 
 $('#workLink').on('click', function() {
     $(window).scrollTop(0);
     $('#about').fadeOut('fast');
+    $("#about").addClass("hide");
     $('#work').fadeIn('fast');
+    $('#work').removeClass('hide');
     $('#singleProject').hide();
-
+    $("#singleProject").addCladd("hide");
 });
 
 $('#back').on('click', function() {
     $(window).scrollTop(0);
-    $('#singleProject').fadeOut('fast');
+    $('#about').fadeOut('fast');
+    $("#about").addClass("hide");
     $('#work').fadeIn('fast');
-    $('#about').hide('');
+    $('#work').removeClass('hide');
     $('#singleProject').hide();
+    $("#singleProject").addCladd("hide");
 });
 
 
@@ -61,6 +68,8 @@ function pushProjects(projects) {
 function showSingleProject(projects) {
     $('.project').on('click', function() {
         $('#work').fadeOut('fast');
+        $('#work').addClass('hide');
+        $('#about').addClass('hide');
         $('#singleProject').empty();
         $(window).scrollTop(0);
 

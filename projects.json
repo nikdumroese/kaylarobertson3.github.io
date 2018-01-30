@@ -1,6 +1,6 @@
 [{
         "title": "Honey Social Network",
-        "desc": "A mock social network where users can login or register, upload a profile picture, and add and delete friends.",
+        "desc": "A mock social network where users can login or register, upload a profile picture, and add and delete friends. Built with React and Redux. Backend uses Express and PostgreSQL. Image upload and storage with AWS S3.",
         "tech": "React.js, PostgreSQL, Redux, AWS S3",
         "pub": "SPICED Academy",
         "viewProject": "https://honey-social-network.herokuapp.com/",
@@ -8,11 +8,14 @@
         "img": "projects/honey.png",
         "img2": "projects/honey2.png",
         "img3": "projects/honey3.png",
+        "alt": "Honey homepage",
+        "alt2": "Honey profile page",
+        "alt3": "Honey friends page",
         "id": "32"
     },
     {
         "title": "Protect public lands petition",
-        "desc": "A full stack application that allows users to register and login, sign a canvas petition and edit their profile. Built during SPICED Academy, an immersive JavaScript-based web development course.",
+        "desc": "A full stack application that allows users to register and login, sign a canvas petition and edit their profile. Server-side template rendering with Express and Handlebars. Stores and accesses data with PostgreSQL.",
         "tech": "Handlebars, Node.js, Express.js, PostgreSQL",
         "pub": "SPICED Academy",
         "viewProject": "https://protect-public-lands.herokuapp.com/",
@@ -27,7 +30,7 @@
     },
     {
         "title": "U-Bahn typography image board",
-        "desc": "A mock-Instagram full stack, single page application for uploading photos of typography along Berlin's U-Bahn. Commenting is also supported. Built with Angular.js.",
+        "desc": "A mock-Instagram full stack, single page application for uploading photos of typography along Berlin's U-Bahn. Commenting is also supported. Built with Angular.js. Built with Angular. Uses PostgreSQL for storing comments, users and URLs. Images uploaded and hosted through AWS S3.",
         "tech": "Angular.js, Node.js, Express.js, PostgreSQL, AWS S3",
         "pub": "SPICED Academy",
         "viewProject": "https://u-bahn-typography.herokuapp.com/",

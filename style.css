@@ -33,6 +33,12 @@ a {
     text-decoration: none;
 }
 
+/* hide from screen readers when it's hidden visually */
+.hide {
+visibility: none;
+display: none;
+}
+
 /* ============= UNVERLINE ON HOVER ============= */
 
 .hov {
@@ -302,6 +308,7 @@ p {
 /* =================== SINGLE PROJECT =================== */
 
 #singleProject {
+    display: none;
     display: flex;
     flex-direction: column;
 }
