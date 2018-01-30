@@ -38,7 +38,7 @@
     },
     {
         "title": "Your Spotify listening habits",
-        "desc": "An interactive visualization of your Spotify listening habits. Built with: D3.js, JQuery, Express and Handlebars Edit Add topics. (Note: first chart is currently under maintenance. Check back soon!)",
+        "desc": "An interactive visualization of your Spotify listening habits. Built with: D3.js, JQuery, Express and Handlebars.",
         "tech": "D3.js, Britecharts, Handlebars.js, Express.js, Spotify API",
         "pub": "SPICED Academy",
         "viewProject": "http://spotify-api-charts.herokuapp.com/",
