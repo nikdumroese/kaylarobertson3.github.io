@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Spotify Search</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:100,300,400" rel="stylesheet">
+</head>
+
+<body>
+<div id="headerBar">
+    <h1>Spotify Search</h1>
+    <p>Type an artist or album name into the input field and click on "Go" to see a list of results.</p>
+    <div id="searchArea">
+        <input id="input"></input>
+    <select id="select">
+        <option value="album"selected>Album</option>
+         <option value="artist" >Artist</option>
+    </select>
+        <button id = "searchButton" class="myButton">Go</button>
+    </div>
+</div>
+
+<h2 class="showingResults"></h2>
+
+<div id="results"></div>
+<button id="more" class='myButton'>More</button>
+
+
+
+<!-- <footer>
+    <p>footer</p>
+</footer> -->
+
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js "></script>
+<script src="script.js" charset="utf-8"></script>
+
+</body>
+</html>

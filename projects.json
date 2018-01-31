@@ -35,6 +35,8 @@
         "pub": "SPICED Academy",
         "viewProject": "https://u-bahn-typography.herokuapp.com/",
         "thumb": "projects/thumbs/imageboard.png",
+        "alt": "imageboard homepage",
+        "alt2": "imageboard single image page",
         "img": "projects/imageboard.png",
         "img2": "projects/imageboard2.png",
         "id": "30"
@@ -46,9 +48,22 @@
         "pub": "SPICED Academy",
         "viewProject": "http://spotify-api-charts.herokuapp.com/",
         "thumb": "projects/thumbs/spotify.png",
+        "alt": "spotify charts homepage",
+        "alt2": "spotify charts infographic",
         "img": "projects/spotify.png",
         "img2": "projects/spotify2.gif",
         "id": "31"
+    },
+    {
+        "title": "Spotify Search",
+        "desc": "Display Spotify search results using the Spotify API",
+        "tech": "JQuery, Ajax calls to Spotify API, Handlebars",
+        "pub": "SPICED Academy",
+        "viewProject": "http://kaylarobertsondesign.com/search-spotify",
+        "thumb": "projects/thumbs/spotify.png",
+        "alt": "spotify search results",
+        "img": "projects/search-spotify.png",
+        "id": "36"
     },
     {
         "title": "Infographics: Missoula to Berlin",
