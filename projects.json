@@ -60,7 +60,7 @@
         "tech": "JQuery, Ajax calls to Spotify API, Handlebars",
         "pub": "SPICED Academy",
         "viewProject": "http://kaylarobertsondesign.com/search-spotify",
-        "thumb": "projects/thumbs/spotify.png",
+        "thumb": "projects/thumbs/search-spotify.png",
         "alt": "spotify search results",
         "img": "projects/search-spotify.png",
         "id": "36"
