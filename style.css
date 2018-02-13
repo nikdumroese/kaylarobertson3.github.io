@@ -189,11 +189,12 @@ p {
 .connect li {
     font-family: 'Open Sans', sans-serif;
     font-size: 13px;
-    letter-spacing: 2px;
-    color: #adadad;
+    letter-spacing: 1.5px;
+    color: #7a7e82;
     text-align: center;
     line-height: 2;
     margin-right: 1rem;
+    text-transform: uppercase;
 }
 
 /* =================== PROJECTS =================== */
