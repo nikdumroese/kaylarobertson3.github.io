@@ -125,12 +125,15 @@ p {
 
 .navlinks {
     font-size: 15px;
-    font-weight: 700;
-    letter-spacing: 2px;
-    color: #adadad;
-    margin: 1rem 1rem 1rem 0;
     font-family: 'Open Sans', sans-serif;
     text-decoration: none;
+    color: #7a7e82;
+    margin: 1rem 1rem 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 300;
+    text-align: left;
 }
 
 /* =================== ABOUT =================== */
