@@ -1,104 +1,95 @@
 <!DOCTYPE html>
 <html>
+    <head>
+        <!-- Global site tag (gtag.js) - Google Analytics -->
+        <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113245303-1"></script>
+        <script>
+            window.dataLayer = window.dataLayer || [];
 
-<head>
-    <!-- Global site tag (gtag.js) - Google Analytics -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=UA-113245303-1"></script>
-    <script>
-        window.dataLayer = window.dataLayer || [];
+            function gtag() {
+                dataLayer.push(arguments);
+            }
+            gtag('js', new Date());
 
-        function gtag() {
-            dataLayer.push(arguments);
-        }
-        gtag('js', new Date());
+            gtag('config', 'UA-113245303-1');
+        </script>
+        <link href="img/favicon-32x32.png" rel="shortcut icon" type="image/x-icon" />
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Development, Design, Journalism" />
+        <meta name="keywords" content="Kayla Robertson, Kayla, Robertson, development, design, javascript, journalism, Berlin, Germany" />
+        <title>Kayla Robertson</title>
+        <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Playfair+Display:400,400i,700" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" href="style.css">
+    </head>
 
-        gtag('config', 'UA-113245303-1');
-    </script>
-    <link href="img/favicon-32x32.png" rel="shortcut icon" type="image/x-icon" />
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="description" content="Development, Design, Journalism" />
-    <meta name="keywords" content="Kayla Robertson, Kayla, Robertson, development, design, javascript, journalism, Berlin, Germany" />
-    <title>Kayla Robertson</title>
-    <link href="https://fonts.googleapis.com/css?family=Open+Sans:400,600,700|Playfair+Display:400,400i,700" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="style.css">
-</head>
+    <body>
+        <div id="all">
+            <div class="flex-wrapper">
 
-<body>
-    <div id="all">
-        <div class="flex-wrapper">
+                <div id="nav">
+                    <a aria-label="View work"><h3 class="navlinks hov" id="workLink">WORK</h3></a>
+                    <a aria-label="View About"><h3 class="navlinks hov" id="aboutLink">ABOUT</h3></a>
+                    <a href="projects/CV-kayla-robertson.pdf" target="_blank" aria-label="open resume"><h3 class="navlinks hov" id="resumeLink">RESUME</h3></a>
+                </div>
+                <div class="intro">
+                    <h1>Kayla Robertson</h1>
+                    <h2>Developer, designer, journalist</h2>
+                </div>
+                <div id="about">
+                    <div id="aboutWrapper">
+                        <div id="aboutLeftCol">
+                            <img src="projects/me.JPG" id="me" alt="Kayla Robertson" />
+                        </div>
+                        <div id="aboutRightCol">
+                            <p>Hi,  I'm Kayla. I'm a developer / designer / journalist based in Berlin.</p>
 
-            <div id="nav">
-                <a aria-label="View work"><h3 class="navlinks hov" id="workLink">WORK</h3></a>
-                <a aria-label="View About"><h3 class="navlinks hov" id="aboutLink">ABOUT</h3></a>
-                <a href="projects/CV-kayla-robertson.pdf" target="_blank" aria-label="open resume"><h3 class="navlinks hov" id="resumeLink">RESUME</h3></a>
-            </div>
+                            <p>I studied journalism at the University of Montana, where I found my passion for telling stories through design and technology.  Currently, I'm working as a frontend developer at Buying Show GmbH.</p>
 
-            <div class="intro">
-                <h1>Kayla Robertson</h1>
-                <h2>Developer, designer, journalist</h2>
-            </div>
-
-            <div id="about">
-                <div id="aboutWrapper">
-                    <div id="aboutLeftCol">
-                        <img src="projects/me.JPG" id="me" alt="Kayla Robertson" />
-                    </div>
-                    <div id="aboutRightCol">
-                        <p>I recently graduated with a degree in journalism from the University of Montana, where I found my passion for telling stories through design. What began with designing print newspapers and infographics quickly moved to a focus on web development.</p>
-                        <p>I moved to Berlin, Germany, after graduation to attended a full-stack web development course, focused on JavaScript.</p>
-                        <p>Previously, I worked at the Denver Post as the design and graphics intern. In college, I co-built and designed the website for the <a href="http://metheffect.com/" class="hov">Meth Effect</a>, managed infographics, page and web design at the <a href="http://www.montanakaimin.com/" class="hov">Montana Kaimin</a> and managed student web designers at the Innovation Studio. I also occasionally freelance. </p>
-                        <br />
-                        <ul class="connect">
-                            <a href="https://github.com/kaylarobertson3" target="_blank" aria-label="Github" class="hov">
-                                <li>Github →</li>
-                            </a>
-                            <a href="https://www.linkedin.com/in/kaylarobertson" target="_blank" class="hov" aria-label="Linkedin">
-                                <li>Linkedin →</li>
-                            </a>
-                            <a href="https://twitter.com/kaylajoro" target="_blank" class="hov" aria-label="Twitter">
-                                <li>Twitter→</li>
-                            </a>
-                            <a href="mailto:kayla.robertson3@gmail.com" target="_blank" aria-label="Email" class="hov">
-                                <li>Email →</li>
-                            </a>
-                            <a href="projects/CV-kayla-robertson.pdf" target="_blank" class="hov" aria-label="Resume">
-                                <li>Resume / CV→</li>
-                            </a>
-                        </ul>
-                        <br />
-                        <br />
+                            <p>Previously, I graduated from a full-stack web development course in Berlin, worked at the <a href="http://www.denverpost.com/" class="hov">Denver Post</a> as a design and graphics intern, managed infographics, page and web design at the <a href="http://www.montanakaimin.com/" class="hov">Montana Kaimin</a> and managed student designers with a focus on accessible design at the Innovation Studio. I occasionally freelance. </p>
+                            <br />
+                            <ul class="connect">
+                                <a href="https://github.com/kaylarobertson3" target="_blank" aria-label="Github" class="hov">
+                                    <li>Github →</li>
+                                </a>
+                                <a href="https://www.linkedin.com/in/kaylarobertson" target="_blank" class="hov" aria-label="Linkedin">
+                                    <li>Linkedin →</li>
+                                </a>
+                                <a href="https://twitter.com/kaylajoro" target="_blank" class="hov" aria-label="Twitter">
+                                    <li>Twitter→</li>
+                                </a>
+                                <a href="mailto:kayla.robertson3@gmail.com" target="_blank" aria-label="Email" class="hov">
+                                    <li>Email →</li>
+                                </a>
+                                <a href="projects/CV-kayla-robertson.pdf" target="_blank" class="hov" aria-label="Resume">
+                                    <li>Resume / CV→</li>
+                                </a>
+                            </ul>
+                            <br />
+                            <br />
+                        </div>
                     </div>
                 </div>
+                <div id="work">
+                    <div id="projects"></div>
+                </div>
+                <div id="singleProject">
+                </div>
             </div>
-
-            <div id="work">
-                <div id="projects"></div>
-            </div>
-
-            <div id="singleProject">
-            </div>
-
+            <footer>
+                <div id="social">
+                    <ul>
+                        <li><a href="mailto:kayla.robertson3@gmail.com" target="_blank" aria-label="Send me an email"><i class="fa fa-envelope fa-2x"></i></a></li>
+                        <li><a href="https://github.com/kaylarobertson3" target="_blank" aria-label="View my github"><i class="fa fa-github fa-2x"></i></a></li>
+                        <li><a href="https://www.linkedin.com/in/kaylarobertson/" target="_blank" aria-label="View my linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li>
+                        <li><a href="https://twitter.com/kaylajoro" target="_blank" aria-label="View my twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
+                    </ul>
+                </div>
+                <p> &copy; KAYLA ROBERTSON 2018</p>
+            </footer>
         </div>
-
-        <footer>
-            <div id="social">
-                <ul>
-                    <li><a href="mailto:kayla.robertson3@gmail.com" target="_blank" aria-label="Send me an email"><i class="fa fa-envelope fa-2x"></i></a></li>
-                    <li><a href="https://github.com/kaylarobertson3" target="_blank" aria-label="View my github"><i class="fa fa-github fa-2x"></i></a></li>
-                    <li><a href="https://www.linkedin.com/in/kaylarobertson/" target="_blank" aria-label="View my linkedin"><i class="fa fa-linkedin fa-2x"></i></a></li>
-                    <li><a href="https://twitter.com/kaylajoro" target="_blank" aria-label="View my twitter"><i class="fa fa-twitter fa-2x"></i></a></li>
-                </ul>
-            </div>
-            <p> &copy; KAYLA ROBERTSON 2018</p>
-        </footer>
-
-    </div>
-
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
-    <script src="https://use.fontawesome.com/a458eb80ec.js"></script>
-    <script src="script.js" charset="utf-8"></script>
-
-</body>
-
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://use.fontawesome.com/a458eb80ec.js"></script>
+        <script src="script.js" charset="utf-8"></script>
+    </body>
 </html>
